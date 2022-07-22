@@ -35,7 +35,7 @@ streamlit.sidebar.write('##### *Note: Visualization is based on data for session
 #Visualization for selection 
 figure = plotly_express.sunburst(data_frame = data[data['session_start'] == entity], 
                                  path = ['session_start', 'change_type', 'search_depth', 'entity'],
-                                 values = '%total',
+                                 values = 'percent_total',
                                  color = 'change_type',
                                  color_discrete_sequence = plotly_express.colors.qualitative.Safe,
                                  maxdepth = -1,
