@@ -12,11 +12,6 @@ connect_instance = connect()
 data = connect_instance.execute(f'SELECT * FROM "{gsheet_url}"')
 data = pd.DataFrame(data)
 
-#Dashboard title and organization logo
-column1, column2, column3 = streamlit.columns([22, 30, 22])
-with column2:
-    streamlit.image('https://crowdanalytixcom.b-cdn.net/wp-content/uploads/2020/04/logo.png', width = 400)
-
 #Adding separator b/w logo and visualization
 streamlit.write('')
 
